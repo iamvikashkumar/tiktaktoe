@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" style="background: url(./image/ttt.jpg) no-repeat center center fixed;">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="./index.js"></script>
+
+  <title>TIC TAC TOE</title>
+</head>
+<body ng-app="myApp" style="padding-left: 10%;">  
+  <div ng-controller="myCtrl">
+    <h3 style="margin: 0px; color: aliceblue;">First Player = "X"</h3><br>
+    <h3 style="margin: 0px; color: aliceblue;">Second Player = "O"</h3> <br>
+<b style="color: aliceblue;">-------------------------------------</b>
+  <br>
+    <b style="color: aliceblue;">Score</b> <br>
+    <b style="color: aliceblue;">-------------------------------------</b>
+    <br>
+<b style="color: aliceblue;">First Player Score = {{player1}} </b>    <br>
+<b style="color: aliceblue;">Second Player Score = {{player2}}</b>     
+
+  <br><br><br>
+
+  
+  <input type="text" ng-readonly="true" style="height: 60px; width: 60px;font-size: 40px; font-weight: bold; text-align: center;" ng-click="Clicked('one',firstPlayer)" ng-model="one">
+  <input type="text" ng-readonly="true" style="height: 60px; width: 60px;font-size: 40px; font-weight: bold; text-align: center;" ng-click="Clicked('two',firstPlayer)" ng-model="two">
+  <input type="text" ng-readonly="true" style="height: 60px; width: 60px;font-size: 40px; font-weight: bold; text-align: center;" ng-click="Clicked('three',firstPlayer)" ng-model="three"><br>
+
+  <input type="text" ng-readonly="true" style="height: 60px; width: 60px;font-size: 40px; font-weight: bold; text-align: center;" ng-click="Clicked('four',firstPlayer)" ng-model="four">
+  <input type="text" ng-readonly="true" style="height: 60px; width: 60px;font-size: 40px; font-weight: bold; text-align: center;" ng-click="Clicked('five',firstPlayer)" ng-model="five">
+  <input type="text" ng-readonly="true" style="height: 60px; width: 60px;font-size: 40px; font-weight: bold; text-align: center;" ng-click="Clicked('six',firstPlayer)" ng-model="six"><br>
+
+  <input type="text" ng-readonly="true" style="height: 60px; width: 60px;font-size: 40px; font-weight: bold; text-align: center;" ng-click="Clicked('seven',firstPlayer)" ng-model="seven">
+  <input type="text" ng-readonly="true" style="height: 60px; width: 60px;font-size: 40px; font-weight: bold; text-align: center;" ng-click="Clicked('eight',firstPlayer)" ng-model="eight">
+  <input type="text" ng-readonly="true" style="height: 60px; width: 60px;font-size: 40px; font-weight: bold; text-align: center;" ng-click="Clicked('nine',firstPlayer)" ng-model="nine"><br>
+
+  <br>
+  <br>
+  <span><b style="color: aliceblue;">{{result}}</b></span>
+  <br>
+  <br>
+  <button type="button" ng-click="continueGame()">Continue Game</button>
+  <button type="button" ng-click="resetGame()">Reset Game</button>
+</div>
+  </body>
+</html>
